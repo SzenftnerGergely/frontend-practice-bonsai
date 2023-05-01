@@ -1,0 +1,802 @@
+/* --- Reset --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  font-family: 'Gellix', sans-serif;
+  color: #4c4d5f;
+}
+
+img, picture, svg, video {
+    display: block;
+    max-width: 100%;
+}
+/* --- Reset --- */
+
+/* --- Variables --- */
+:root {
+    --bg-img-layer: -10;
+    --nav-layer: 10;
+    
+}
+/* --- Variables --- */
+
+strong {
+  font-weight: 500;
+}
+
+/*========= Dropdown-Menu & Navbar ====================================*/
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 0 10rem;
+}
+
+.logo-img {
+  transform: scale(1.25);
+}
+
+/* Navbar container */
+.navbar {
+  max-width: 1024px;
+  overflow: hidden;
+  font-family: inherit;
+  display: flex;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: #4c4d5f;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  background-color: white;
+  border: none;
+  outline: none;
+  color: #4c4d5f;
+  padding: 0.75rem 1rem;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  color: #00b289;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 0.25rem;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 0.75rem 1rem;
+  margin: 0 0.25rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn-group {
+  font-family: inherit;
+  margin-left: 6rem;
+  align-self: center;
+}
+
+.login-btn {
+  background-color: white;
+  color: #00b289;
+  border: solid 1px  #00b289;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+}
+
+.login-btn:hover {
+  background-color: #00b289;
+  color: white;
+  border: solid 1px  white;
+}
+
+.login-btn:focus {
+  background-color: #00b289;
+  color: white;
+  border: solid 1px  white;
+}
+
+.start-free-btn {
+  background-color:  #00b289;
+  color: white;
+  border: solid 1px  #00b289;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  border-radius: 0.25rem;
+}
+
+.start-free-btn:hover {
+  background-color: white;
+  color: #00b289;
+  border: solid 1px  #00b289;
+}
+
+.start-free-btn:focus {
+  background-color: white;
+  color: #00b289;
+  border: solid 1px  #00b289;
+}
+
+/*========= Switch ====================================*/
+
+.switch-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.switch-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch-container h1 {
+  font-size: 2rem;
+  color: #4c4d5f;
+  font-weight: bold;
+}
+
+.switch-container h2 {
+  margin: 0 2rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.switch-bottom-text {
+  font-size: 0.80rem;
+  text-align: right;
+  letter-spacing: 1px;
+  margin-left: 2rem;
+}
+
+/*========= Arrow ====================================*/
+
+.arrow-container {
+  margin: 0 auto;
+  max-width: 1024px;
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  left: 85.5%;
+  top: -35%;
+}
+
+.switch-upper-text {
+  font-size: 0.75rem;
+  color: #00b289;
+  text-align: right;
+  align-self: baseline;
+}
+
+.arrow {
+	position: relative;
+  width: 100px;
+}
+
+.arrow .curve {
+	border: 2px dashed #00b289;
+	border-color: transparent #00b289 transparent transparent;
+	height: 66px;
+	width: 165px;
+	border-radius: 0 250px 250px 0;
+}
+
+.arrow .point {
+	position: absolute;
+}
+
+.arrow .point:before, .arrow .point:after {
+	border: 1px solid #00b289;
+	height: 5px;
+	content: "";
+	position: absolute;
+}
+
+.arrow .point:before {
+	top: -15px;
+	left: 154px;
+	transform:rotate(-74deg);
+	-webkit-transform:rotate(-200deg);
+  -moz-transform:rotate(-74deg);
+  -ms-transform: rotate(-74deg);
+}
+
+.arrow .point:after {
+  top: -14px;
+	left: 156px;
+	transform:rotate(12deg);
+	-webkit-transform: rotate(90deg);
+  -moz-transform:rotate(12deg);
+  -ms-transform: rotate(12deg);
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #00b289;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #00b289;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #00b289;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .switch-bottom-text-accent {
+    color:#00b289;
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/*===================== Main-Widgets ===============================*/
+
+.widgets-container {
+  max-width: 1024px;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.widget-left-container,
+.widget-right-container {
+  padding: 3rem 5rem;
+  border: 1px solid lightgray;
+  box-shadow: 0 0.5rem 1rem 0 lightgray;
+  border-radius: 3px;
+  position: relative;
+}
+
+.ribbon {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 300px;
+  padding: 15px 0;
+  background-color: #00b289;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.ribbon-top-right {
+  top: -1px;
+  right: -1px;
+}
+.ribbon-top-right::before,
+.ribbon-top-right::after {
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+.ribbon-top-right::before {
+  top: 0;
+  left: 0;
+}
+.ribbon-top-right::after {
+  bottom: 0;
+  right: 0;
+}
+.ribbon-top-right span {
+  left: -25px;
+  top: 45px;
+  transform: rotate(45deg);
+}
+
+.widget-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.widget-price {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 3rem;
+}
+
+.widget-price-dollar{
+  align-self: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transform: translateY(-0.5rem);
+}
+
+.widget-price-number{
+  font-size: 3rem;
+  font-weight: 500;
+} 
+
+.widget-price-month {
+  margin-left: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.widget-list {
+  padding: 3rem 3rem 3rem 0;
+  border-top: 2px solid #00b289;
+}
+
+.widget-list li::marker  {
+  content: '✓';
+  color: #00b289;
+  padding-right: 3px;
+}
+
+.widget-list li{
+  margin: 0 0 20px 20px;
+  padding-left: 3px;
+}
+
+.new-widget {
+  background-color: #f8db62;
+  color:white;
+  display: inline;
+  font-size: 0.75rem;
+  padding: 0.15rem 0.25rem;
+}
+
+.widget-btn {
+  background-color: #00b289;
+  border: 1px solid #00b289;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 3rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.widget-btn:hover {
+  background-color: white;
+  color: #00b289;
+  border: 1px solid #00b289;
+}
+.widget-btn:focus {
+  background-color: white;
+  color: #00b289;
+  border: 1px solid #00b289;
+}
+
+/*==================== Add-ons-offers ==================================*/
+
+.super-charge {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem 0;
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.offers-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.offers-top-container,
+.offers-mid-container,
+.offers-bottom-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  margin-top: 1rem;
+  box-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+.offers-container div > h3 {
+  font-size: 1.25rem;
+  padding-bottom: 0.50rem;
+  font-weight: 500;
+}
+
+.offers-price {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.offers-bottom-container p {
+  margin-bottom: 0.5rem;
+}
+
+.offers-link{
+  text-decoration: none;
+  margin-top: 1rem;
+  color:#00b289;
+  font-weight: 500;
+}
+
+.offers-link:hover{
+  color:#4c4d5f;
+}
+.offers-link:focus{
+  color:#4c4d5f;
+}
+
+/*==================== Your business ==================================*/
+
+.your-business-container {
+  max-width: 1024px;
+  margin: 4rem auto;
+  background-color: #f3fbff;
+  display: flex;
+  justify-content: space-between;
+  padding: 6rem 3rem;
+  border-radius: 3px;
+  align-items: center;
+}
+
+.your-business-text {
+  font-size: 2.25rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.color-accent {
+  color: #00b289;
+}
+
+.your-business-btn {
+  background-color: #00b289;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 3rem;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.your-business-btn:hover {
+  background-color: #12c49a;
+  color: white;
+}
+.your-business-btn:focus {
+  background-color: #12c49a;
+  color: white;
+}
+
+/*=========================== FAQ Accordion ========================*/ 
+
+.FAQ {
+  text-align: center;
+  color: #00b289;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+#faq {
+  max-width: 1024px;
+  margin: 0 auto 4rem;
+  padding: 0 5rem;
+}
+
+section.faq {
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+#faq ul {
+  text-align: left;
+}
+.transition, p, ul li i:before, ul li i:after {
+  transition: all 0.3s;
+}
+
+#faq .no-select, #faq h2 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+#faq h1 {
+  color: #4c4d5f;
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+#faq h2 {
+  font-size: 20px;
+  line-height: 16px;
+  text-align: left;
+  padding: 15px 15px 0;
+  text-transform: none;
+  letter-spacing: 1px;
+  display: block;
+  margin: 0;
+  cursor: pointer;
+  transition: .2s;
+}
+
+#faq p {
+  color:#4c4d5f;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.45;
+  position: relative;
+  overflow: hidden;
+  max-height: 250px;
+  will-change: max-height;
+  contain: layout;
+  display: inline-block;
+  opacity: 1;
+  transform: translate(0, 0);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 0 50px 0 15px;
+  transition: .3s opacity, .6s max-height;
+  hyphens: auto;
+  z-index: 2;
+}
+
+#faq ul {
+  list-style: none;
+  perspective: 900;
+  padding: 0;
+  margin: 0;
+}
+#faq ul li {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  /*padding-bottom: 4px;*/
+  /*padding-top: 18px;*/
+  background: #fff;
+  -webkit-tap-highlight-color: transparent;
+}
+#faq ul li + li {
+  margin-top: 5px;
+}
+#faq ul li:last-of-type {
+  padding-bottom: 0;
+}
+#faq ul li i {
+  position: absolute;
+  transform: translate(-6px, 0);
+  margin-top: 28px;
+  right: 15px;
+}
+#faq ul li i:before, ul li i:after {
+  content: "";
+  position: absolute;
+  background-color: lightgray;
+  width: 3px;
+  height: 9px;
+}
+#faq ul li i:before {
+  transform: translate(-2px, 0) rotate(45deg);
+}
+#faq ul li i:after {
+  transform: translate(2px, 0) rotate(-45deg);
+}
+#faq ul li input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  touch-action: manipulation;
+}
+#faq ul li input[type=checkbox]:checked ~ h2 {
+  color: #4c4d5f;
+}
+#faq ul li input[type=checkbox]:checked ~ p {
+  /*margin-top: 0;*/
+  max-height: 0;
+  transition: .3s;
+  opacity: 0;
+  /*transform: translate(0, 50%);*/
+}
+#faq ul li input[type=checkbox]:checked ~ i:before {
+  transform: translate(2px, 0) rotate(45deg);
+}
+#faq ul li input[type=checkbox]:checked ~ i:after {
+  transform: translate(-2px, 0) rotate(-45deg);
+}
+
+/*=========================== Footer ========================*/ 
+
+.footer-container {
+  display: flex;
+  max-width: 1024px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding: 4rem 0;
+}
+
+.footer-left,
+.footer-mid, 
+.footer-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container h3 {
+  padding-bottom: 2rem;
+  color:#4c4d5f;
+  font-weight: 500;
+}
+
+.footer-container a {
+  padding: 0.5rem 0;
+  color:#4c4d5f;
+  text-decoration: none;
+}
+
+.footer-container a:hover {
+  color: #00b289;
+}
+.footer-container a:focus {
+  color: #00b289;
+}
+
+.footer-link-spacer {
+  margin-top: 1.5rem;
+}
+
+.footer-link-spacer-half {
+  margin-top: 0.5rem;
+}
+
+
+
+/*=============== Dropdown-Footer =================*/
+
+/* Style The Dropdown Button */
+.dropbtn-footer {
+  background-color: white;
+  color:#4c4d5f;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.0rem;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown-footer {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content-footer {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content-footer a {
+  color: #4c4d5f;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content-footer a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown-footer:hover .dropdown-content-footer {
+  display: block;
+}
+
+/* Change the color of the dropdown button when the dropdown content is shown */
+.dropdown-footer:hover .dropbtn-footer {
+  color: #00b289;
+}
