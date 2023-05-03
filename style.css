@@ -16,6 +16,21 @@ body {
   color: #4c4d5f;
 }
 
+body::before {
+  z-index:-1;
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: top;
+  background-color: #f3fbff;
+  clip-path: polygon(45% 0, 100% 0%, 100% 80%, 56% 100%);
+}
+
+
 img, picture, svg, video {
     display: block;
     max-width: 100%;
@@ -35,6 +50,10 @@ strong {
 }
 
 /*========= Dropdown-Menu & Navbar ====================================*/
+
+.overlay {
+  filter: invert(47%) sepia(89%) saturate(2674%) hue-rotate(136deg) brightness(96%) contrast(101%);
+}
 
 nav {
   display: flex;
@@ -72,7 +91,7 @@ nav {
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  background-color: white;
+  background-color: transparent;
   border: none;
   outline: none;
   color: #4c4d5f;
@@ -124,7 +143,7 @@ nav {
 }
 
 .login-btn {
-  background-color: white;
+  background-color: transparent;
   color: #00b289;
   border: solid 1px  #00b289;
   padding: 0.5rem 1.5rem;
@@ -155,13 +174,13 @@ nav {
 }
 
 .start-free-btn:hover {
-  background-color: white;
+  background-color: transparent;
   color: #00b289;
   border: solid 1px  #00b289;
 }
 
 .start-free-btn:focus {
-  background-color: white;
+  background-color: transparent;
   color: #00b289;
   border: solid 1px  #00b289;
 }
@@ -339,6 +358,7 @@ nav {
   margin: 3rem auto;
   display: flex;
   justify-content: space-between;
+  background-color: white;
 }
 
 .widget-left-container,

@@ -1,5 +1,5 @@
-let inputEl = document.getElementById("input")
-let greenTextEl = document.getElementById("accent-color")
+const inputEl = document.getElementById("input")
+const greenTextEl = document.getElementById("accent-color")
 
 inputEl.addEventListener("click", ()=> {
     if(inputEl.checked) {
