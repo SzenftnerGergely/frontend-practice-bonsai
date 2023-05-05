@@ -56,10 +56,6 @@ main, footer {
   margin: 0 auto;
 }
 
-.overlay {
-  filter: invert(47%) sepia(89%) saturate(2674%) hue-rotate(136deg) brightness(96%) contrast(101%);
-}
-
 nav {
   display: flex;
   justify-content: space-around;
@@ -69,6 +65,7 @@ nav {
 
 .logo-img {
   transform: scale(1.25);
+  filter: invert(47%) sepia(89%) saturate(2674%) hue-rotate(136deg) brightness(96%) contrast(101%);
 }
 
 /* Navbar container */
@@ -370,6 +367,7 @@ nav {
   overflow: hidden;
   position: absolute;
 }
+
 .ribbon span {
   position: absolute;
   display: block;
@@ -377,7 +375,6 @@ nav {
   padding: 15px 0;
   background-color: #00b289;
   color: #fff;
-  text-transform: uppercase;
   text-align: center;
   font-weight: 500;
   letter-spacing: 1px;
@@ -386,19 +383,7 @@ nav {
   top: -1px;
   right: -1px;
 }
-.ribbon-top-right::before,
-.ribbon-top-right::after {
-  border-top-color: transparent;
-  border-right-color: transparent;
-}
-.ribbon-top-right::before {
-  top: 0;
-  left: 0;
-}
-.ribbon-top-right::after {
-  bottom: 0;
-  right: 0;
-}
+
 .ribbon-top-right span {
   left: -25px;
   top: 45px;
