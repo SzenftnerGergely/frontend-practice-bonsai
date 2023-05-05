@@ -27,7 +27,7 @@ body::before {
   background-size: cover;
   background-position: top;
   background-color: #f3fbff;
-  clip-path: polygon(45% 0, 100% 0%, 100% 80%, 56% 100%);
+  clip-path: polygon(49% 0, 100% 0%, 100% 70%, 57% 91%);
 }
 
 
