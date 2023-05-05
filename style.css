@@ -67,7 +67,7 @@ nav {
 }
 
 /* Navbar container */
-.navbar {
+.navbar-btn-group {
   max-width: 1024px;
   overflow: hidden;
   font-family: inherit;
@@ -75,7 +75,7 @@ nav {
 }
 
 /* Links inside the navbar */
-.navbar a {
+.navbar-btn-group a {
   float: left;
   font-size: 16px;
   padding: 0.75rem 1rem;
@@ -100,7 +100,7 @@ nav {
   margin: 0; /* Important for vertical align on mobile phones */
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar-btn-group a:hover, .dropdown:hover .dropbtn {
   color: #00b289;
 }
 
@@ -221,6 +221,17 @@ nav {
   margin-left: 2rem;
 }
 
+.switch-bottom-text-accent {
+  color:#00b289;
+}
+
+.switch-upper-text {
+  font-size: 0.75rem;
+  color: #00b289;
+  text-align: right;
+  align-self: baseline;
+}
+
 /*========= Arrow ====================================*/
 
 .arrow-container {
@@ -233,13 +244,6 @@ nav {
   position: absolute;
   left: 85.5%;
   top: -35%;
-}
-
-.switch-upper-text {
-  font-size: 0.75rem;
-  color: #00b289;
-  text-align: right;
-  align-self: baseline;
 }
 
 .arrow {
@@ -269,19 +273,19 @@ nav {
 .arrow .point:before {
 	top: -15px;
 	left: 154px;
-	transform:rotate(-74deg);
+	transform:rotate(-200deg);
 	-webkit-transform:rotate(-200deg);
-  -moz-transform:rotate(-74deg);
-  -ms-transform: rotate(-74deg);
+  -moz-transform:rotate(-200deg);
+  -ms-transform: rotate(-200deg);
 }
 
 .arrow .point:after {
   top: -14px;
 	left: 156px;
-	transform:rotate(12deg);
+	transform:rotate(90deg);
 	-webkit-transform: rotate(90deg);
-  -moz-transform:rotate(12deg);
-  -ms-transform: rotate(12deg);
+  -moz-transform:rotate(90deg);
+  -ms-transform: rotate(90deg);
 }
 
 /* The switch - the box around the slider */
@@ -336,10 +340,6 @@ nav {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-  }
-
-  .switch-bottom-text-accent {
-    color:#00b289;
   }
   
   /* Rounded sliders */
