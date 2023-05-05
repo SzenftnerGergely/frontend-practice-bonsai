@@ -51,6 +51,11 @@ strong {
 
 /*========= Dropdown-Menu & Navbar ====================================*/
 
+main, footer {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
 .overlay {
   filter: invert(47%) sepia(89%) saturate(2674%) hue-rotate(136deg) brightness(96%) contrast(101%);
 }
@@ -68,7 +73,6 @@ nav {
 
 /* Navbar container */
 .navbar-btn-group {
-  max-width: 1024px;
   overflow: hidden;
   font-family: inherit;
   display: flex;
@@ -188,8 +192,6 @@ nav {
 /*========= Switch ====================================*/
 
 .switch-container {
-  max-width: 1024px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -235,20 +237,13 @@ nav {
 /*========= Arrow ====================================*/
 
 .arrow-container {
-  margin: 0 auto;
-  max-width: 1024px;
   position: relative;
 }
 
-.content {
+.arrow {
   position: absolute;
   left: 85.5%;
   top: -35%;
-}
-
-.arrow {
-	position: relative;
-  width: 100px;
 }
 
 .arrow .curve {
@@ -354,8 +349,7 @@ nav {
 /*===================== Main-Widgets ===============================*/
 
 .widgets-container {
-  max-width: 1024px;
-  margin: 3rem auto;
+  margin: 3rem 0;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -499,8 +493,6 @@ nav {
 }
 
 .offers-container {
-  max-width: 1024px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
@@ -548,8 +540,7 @@ nav {
 /*==================== Your business ==================================*/
 
 .your-business-container {
-  max-width: 1024px;
-  margin: 4rem auto;
+  margin: 4rem 0;
   background-color: #f3fbff;
   display: flex;
   justify-content: space-between;
@@ -730,8 +721,6 @@ section.faq {
 
 .footer-container {
   display: flex;
-  max-width: 1024px;
-  margin: 0 auto;
   justify-content: space-between;
   padding: 4rem 0;
 }
